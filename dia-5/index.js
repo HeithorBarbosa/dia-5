@@ -1,23 +1,29 @@
-let num1 = Number(prompt("digite um número"));
-let num2 = Number(prompt("digite outro número"));
-let operation = prompt(
-  "qual operação voçê gostaria de fazer ?" + "\n1 = + \n2 = - \n3 = / \n4 = *"
+let situaçao = prompt(
+  "do que o senhor gostaria ?" +
+    "\n1 = abastecer com gasolina \n2 = abastecer com álcool \n3 = calibrar os pneus"
 );
 
-switch (operation) {
+switch (situaçao) {
   case "1":
-    console.log(num1 + num2);
+    let gasosa = prompt("qual valor de gasolina você gostaria?");
+    console.log(
+      "seu carro foi abastecido com ",
+      gasosa / 5,
+      " litros de gasolina"
+    );
     break;
   case "2":
-    console.log(num1 - num2);
+    let alcool = prompt("qual valor de álcool você gostaria");
+    console.log(
+      "seu carro foi abastecido com ",
+      alcool / 3,
+      "litros de álcool"
+    );
     break;
   case "3":
-    console.log(num1 / num2);
-    break;
-  case "4":
-    console.log(num1 * num2);
+    console.log("pneus calibrados senhor");
     break;
   default:
-    console.log("talvez você escreveu errado a operação");
+    console.log("desculpe, não temos essa opçâo aqui");
     break;
 }
